@@ -7,9 +7,8 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 import os
-import secret_keys
 
-os.environ['OPENAI_API_KEY']=secret_keys.OpenAIAPI.openai_api_key
+os.environ['OPENAI_API_KEY']=st.secrets.OpenAIAPI.openai_api_key
 chat = ChatOpenAI(model="gpt-3.5-turbo")
 
 # プロンプトのテンプレート
